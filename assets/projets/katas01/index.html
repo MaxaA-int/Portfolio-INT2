@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercice — Les transitions CSS</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="en-tete">
+            <h1>Les transitions CSS</h1>
+            <p class="intro">
+                Passez votre souris sur chaque élément pour observer la transition. Votre travail : compléter les propriétés
+                de transition dans
+                <code>style.css</code>.
+            </p>
+        </header>
+
+        <main class="grille">
+            <section class="exercice" id="exercice-bouton">
+                <h2>1. Bouton coloré</h2>
+                <p>Le bouton doit changer progressivement de couleur au survol.</p>
+                <button type="button" class="bouton">Survolez-moi</button>
+            </section>
+
+            <section class="exercice" id="exercice-carte">
+                <h2>2. Carte qui se soulève</h2>
+                <p>La carte doit monter doucement et gagner une ombre au survol.</p>
+                <article class="carte">
+                    <h3>Montréal</h3>
+                    <p>La plus grande ville du Québec, réputée pour sa vie culturelle.</p>
+                </article>
+            </section>
+
+            <section class="exercice" id="exercice-image">
+                <h2>3. Image agrandie</h2>
+                <p>L'image doit s'agrandir avec fluidité au survol.</p>
+                <div class="cadre-image">
+                    <img src="https://placecats.com/300/200" alt="Image décorative" class="image" />
+                </div>
+            </section>
+
+            <section class="exercice" id="exercice-lien">
+                <h2>4. Lien souligné</h2>
+                <p>
+                    Un trait doit glisser de la gauche vers la droite sous
+                    <a href="#" class="lien">ce lien</a> au survol.
+                </p>
+            </section>
+
+            <section class="exercice" id="exercice-menu">
+                <h2>5. Menu déroulant</h2>
+                <p>Survolez le titre pour afficher le sous-menu avec une ouverture fluide.</p>
+                <nav class="menu">
+                    <button type="button" class="menu-titre">Catégories</button>
+                    <ul class="menu-liste">
+                        <li><a href="#">Actualités</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Sciences</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="exercice" id="exercice-cascade">
+                <h2>6. Apparition en cascade avec <code>sibling-index()</code></h2>
+                <p>
+                    Cochez la case pour révéler la liste : chaque élément doit apparaître avec un délai calculé
+                    automatiquement grâce à la fonction CSS <code>sibling-index()</code>.
+                </p>
+                <p class="avertissement">
+                    ⚠️ <code>sibling-index()</code> est une fonction CSS très récente. Son support est encore partiel
+                    (notamment absent de Firefox au moment d'écrire ces lignes). Consultez
+                    <a href="https://caniuse.com/wf-sibling-count" target="_blank" rel="noopener noreferrer">caniuse.com</a>
+                    pour vérifier la compatibilité avant de l'utiliser en production.
+                </p>
+                <label class="basculer" for="basculer-checkbox"> Afficher la liste </label>
+                <input type="checkbox" class="basculer-checkbox" id="basculer-checkbox" />
+                <ul class="cascade-liste">
+                    <li>Premier élément de la liste</li>
+                    <li>Deuxième élément de la liste</li>
+                    <li>Troisième élément de la liste</li>
+                    <li>Quatrième élément de la liste</li>
+                    <li>Cinquième élément de la liste</li>
+                </ul>
+            </section>
+
+            <section class="exercice" id="exercice-accordeon">
+                <h2>7. Accordéon — animer vers <code>height: auto</code></h2>
+                <p>
+                    Pendant longtemps, animer la hauteur d'un élément vers sa valeur intrinsèque
+                    <code>auto</code> était impossible en CSS pur. Depuis 2024-2025, la propriété
+                    <code>interpolate-size: allow-keywords</code> permet enfin de le faire.
+                </p>
+                <p class="avertissement">
+                    ⚠️ <code>interpolate-size</code> est une propriété récente, encore en cours de déploiement. Vérifiez son
+                    support sur
+                    <a
+                        href="https://caniuse.com/mdn-css_properties_interpolate-size"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >caniuse.com</a
+                    >
+                    avant toute utilisation en production, et prévoyez un repli pour les navigateurs qui ne la prennent pas
+                    encore en charge.
+                </p>
+                <p>
+                    Dans plusieurs contextes, un repli simple peut être de ne pas animer cette transition. En attendant le
+                    support officiel de Safari et Firefox (probablement vers 2027), il est aussi utile de connaître une
+                    alternative fondée sur <code>grid-template-rows</code>. Exemple :
+                    <a href="https://codepen.io/dlapointegilbert/pen/jEMRBbe" target="_blank" rel="noopener noreferrer"
+                        >CodePen (méthode de repli)</a
+                    >.
+                </p>
+                <details class="accordeon">
+                    <summary class="accordeon-titre">Qu'est-ce qu'une transition CSS ?</summary>
+                    <p class="accordeon-texte">
+                        Une transition CSS fait évoluer progressivement la valeur d'une propriété lorsqu'un
+                        changement d'état se produit, comme un survol ou le basculement d'une classe.
+                    </p>
+                </details>
+                <details class="accordeon">
+                    <summary class="accordeon-titre">Quelle différence avec une animation ?</summary>
+                    <p class="accordeon-texte">
+                        Une animation utilise <code>@keyframes</code>, peut se jouer automatiquement au
+                        chargement, se répéter à l'infini et comporter plusieurs étapes intermédiaires — sans
+                        qu'un changement d'état soit nécessaire.
+                    </p>
+                </details>
+                <details class="accordeon">
+                    <summary class="accordeon-titre">
+                        Pourquoi <code>height: auto</code> ne s'animait pas avant ?
+                    </summary>
+                    <p class="accordeon-texte">
+                        Le navigateur n'était pas capable d'interpoler entre une valeur numérique (ex.
+                        <code>0px</code>) et un mot-clé intrinsèque comme <code>auto</code>, dont la valeur
+                        dépend du contenu. <code>interpolate-size: allow-keywords</code> donne maintenant au
+                        navigateur la permission de calculer cette taille et d'animer entre les deux.
+                    </p>
+                </details>
+            </section>
+        </main>
+
+        <footer class="pied">
+            <p>Exercice 1 — Transitions CSS</p>
+        </footer>
+    </body>
+</html>
