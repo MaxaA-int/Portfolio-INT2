@@ -11,9 +11,9 @@
 <body>
     <header class="header fs-08">
         <div class="header__containeur">
-            <p class="header__texte">Intégration 2 - Cégep de Sainte-Foy <span class="couleur-primaire">&#x2022;</span> 2026</p>
-            <h1 class="header__titre">Le parcours de <span class="header-nom-prenom couleur-primaire italic">Maxime Riverin</span></h1>
-            <p class="header__texte">Techniques d'intégration multimédia <span class="couleur-primaire">&#x2022;</span> Session d'hiver 2026</p>
+            <p class="header__texte">Intégration 2 - Cégep de Sainte-Foy <span class="couleur-rougeClair">&#x2022;</span> 2026</p>
+            <h1 class="header__titre">Le parcours de <span class="header-nom-prenom couleur-rougeClair italic">Maxime Riverin</span></h1>
+            <p class="header__texte">Techniques d'intégration multimédia <span class="couleur-rougeClair">&#x2022;</span> Session d'hiver 2026</p>
         </div>
     </header>
 
@@ -21,7 +21,7 @@
         <section class="informations__containeur">
 
             <div class="resume__containeur resume containeur border">
-                <p class="resume__titre fs-08 couleur-primaire">En quelques mots</p>
+                <p class="resume__titre fs-08 couleur-rougeClair">En quelques mots</p>
                 <p class="resume__texte">Cette grille présente les multiples projets réalisés lors du cours <span class="italic underline">Intégration II</span>.
                      On pourra y voir les détails supplémentaires permettant ainsi l'évaluation de mes compétences acquises.</p>
             </div>
@@ -56,17 +56,58 @@
 
                             <h2 class="bloc1__titre projets__titre">À la manière de...</h2>
 
-                            <img src="" alt="" class="bloc1__image projets__image">
+                            <p class="projets__images__containeur images__containeur border">
+                                <img src="assets/images/tp1_rendu_table.png" alt="image du projet 1 (À la manière de)" class="bloc1__image projets__images">
+                            </p>
 
                             <p class="bloc1__categorie projets__categorie border fs-08">Maîtrise Élevée</p>
 
                             <p class="bloc1__texte projets__texte">Une base tehcnique stable dans le..</p>
 
                             <div class="bloc1__bouton projets__bouton">
-                                <button class="border fs-08 couleur-primaire" name="btnDetails" id="bloc1--btnDetails" value="+ Plus de détails" title="Bouton pour voir davantage de détails du projet">
-                                <label for="bloc1--btnDetails">+ Plus de détails</label>
+
+                                <button class="border fs-08 couleur-rougeClair" commandfor="details__projet1" command="show-modal" name="btnDetails" id="bloc1--btnDetails-ouvrir" value="+ Plus de détails" title="Bouton pour voir davantage de détails du projet">
+                                    <label for="bloc1--btnDetails">+ Plus de détails</label>
                                 </button>
+
                             </div>
+
+                            <dialog id="details__projet1" class="details__projets border">
+                                <div class="details__contenu details__contenu1 projets__contenu">
+
+                                    <div class="bloc1__legende projets__legende">
+                                        <p class="projets__legende-nature">Cours - 03 &#x2022; Travail Pratique</p>
+                                        <p class="projets__legende-numero-exercice border">TP1</p>
+                                    </div>
+
+                                    <h2 class="bloc1__titre projets__titre">À la manière de...</h2>
+
+                                    <p class="projets__images__containeur images__containeur border">
+                                        <img src="assets/images/tp1_rendu_table.png" alt="image du projet 1 (À la manière de)" class="bloc1__image projets__images">
+                                    </p>
+
+                                    <p class="bloc1__texte projets__texte">Mise en place des outils de base, validation et organisation...</p>
+
+                                    <div class="details__apprentissages__containeur apprentissages border">
+                                        <h3 class="apprentissages__titre couleur-rougeClair">Ce qui était difficle</h3>
+                                        <p class="apprentissages__texte">Configurer correctment tous les outils et garder...</p>
+                                    </div>
+
+                                    <div class="details__apprentissages__containeur apprentissages border">
+                                        <h3 class="apprentissages__titre couleur-rougeClair">Ce dont je suis fier</h3>
+                                        <p class="apprentissages__texte">Configurer correctment tous les outils et garder...</p>
+                                    </div>
+
+                                    <p class="details__liens__containeur">
+                                        <a href="" class="details__liens">Voir le projet !</a>
+                                    </p>
+                                    
+                                    <button class="border fs-08 couleur-rougeClair" commandfor="details__projet1" command="close" name="btnDetails" id="bloc1--btnDetails-fermer" value="Fermer" title="Bouton pour fermer les détails du projet">
+                                        <label for="bloc1--btnDetails">Fermer</label>
+                                    </button>
+
+                                </div>
+                            </dialog>
 
                         </div>
                     </div>
