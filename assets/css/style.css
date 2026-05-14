@@ -12,6 +12,10 @@
     --couleur-rougeMoyen: #502828;
     --couleur-rougeGris: #A28B8B;
 
+    --couleur-rouge: #d81313;
+    --couleur-orange: #d08011;
+    --couleur-vert: #2f961d;
+
     --texte-primaire: 'futura-pt';
     --texte-seconaire: 'IBM Plex Mono';
 
@@ -102,7 +106,7 @@ body {
 
 .filtre__border {
     border-top: 1px solid var(--couleur-rougeMoyen);
-    width: 64%;
+    width: 60%;
 }
 
 .categorie {
@@ -110,6 +114,16 @@ body {
     flex-direction: row;
     gap: 1rem;
     /* justify-content: space-between; */
+}
+
+.categorie__item:nth-child(1) {
+    border-color: var(--couleur-rouge);
+}
+.categorie__item:nth-child(2) {
+    border-color: var(--couleur-orange);
+}
+.categorie__item:nth-child(3) {
+    border-color: var(--couleur-vert);
 }
 
 .categorie__item {
