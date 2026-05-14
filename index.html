@@ -47,24 +47,24 @@
                 <div class="projets__grille">
 
                     <div class="projets__item projets__item--1 bloc1 border">
-                        <div class="bloc1__contenu projets__contenu">
+                        <div class="projets__contenu">
 
-                            <div class="bloc1__legende projets__legende">
+                            <div class="projets__legende">
                                 <p class="projets__legende-nature">Cours - 03 &#x2022; Travail Pratique</p>
                                 <p class="projets__legende-numero-exercice border">TP1</p>
                             </div>
 
-                            <h2 class="bloc1__titre projets__titre">À la manière de...</h2>
+                            <h2 class="projets__titre">À la manière de...</h2>
 
                             <p class="projets__images__containeur images__containeur border">
-                                <img src="assets/images/tp1_rendu_table.png" alt="image du projet 1 (À la manière de)" class="bloc1__image projets__images">
+                                <img src="assets/images/tp1_rendu_table.png" alt="image du projet 1 (À la manière de)" class="projets__images">
                             </p>
 
-                            <p class="bloc1__categorie projets__categorie border fs-08">Maîtrise Élevée</p>
+                            <p class="projets__categorie border fs-08">Maîtrise Élevée</p>
 
-                            <p class="bloc1__texte projets__texte">Une base tehcnique stable dans le..</p>
+                            <p class="projets__texte">Une base tehcnique stable dans le..</p>
 
-                            <div class="bloc1__bouton projets__bouton">
+                            <div class="projets__bouton">
 
                                 <button class="border fs-08 couleur-rougeClair" commandfor="details__projet1" command="show-modal" name="btnDetails" id="bloc1--btnDetails-ouvrir" value="+ Plus de détails" title="Bouton pour voir davantage de détails du projet">
                                     <label for="bloc1--btnDetails">+ Plus de détails</label>
@@ -73,38 +73,44 @@
                             </div>
 
                             <dialog id="details__projet1" class="details__projets border">
-                                <div class="details__contenu details__contenu1 projets__contenu">
+                                <div class="details__contenu projets__contenu">
 
-                                    <div class="bloc1__legende projets__legende">
+                                    <div class="projets__legende">
                                         <p class="projets__legende-nature">Cours - 03 &#x2022; Travail Pratique</p>
                                         <p class="projets__legende-numero-exercice border">TP1</p>
                                     </div>
 
-                                    <h2 class="bloc1__titre projets__titre">À la manière de...</h2>
+                                    <h2 class="projets__titre">À la manière de...</h2>
 
                                     <p class="projets__images__containeur images__containeur border">
-                                        <img src="assets/images/tp1_rendu_table.png" alt="image du projet 1 (À la manière de)" class="bloc1__image projets__images">
+                                        <img src="assets/images/tp1_rendu_table.png" alt="image du projet 1 (À la manière de)" class="projets__images">
                                     </p>
 
-                                    <p class="bloc1__texte projets__texte">Mise en place des outils de base, validation et organisation...</p>
+                                    <p class="projets__texte">Mise en place des outils de base, validation et organisation...</p>
 
-                                    <div class="details__apprentissages__containeur apprentissages border">
-                                        <h3 class="apprentissages__titre couleur-rougeClair">Ce qui était difficle</h3>
-                                        <p class="apprentissages__texte">Configurer correctment tous les outils et garder...</p>
-                                    </div>
+                                    <div class="details__apprentissages__containeur apprentissages__containeur">
 
-                                    <div class="details__apprentissages__containeur apprentissages border">
-                                        <h3 class="apprentissages__titre couleur-rougeClair">Ce dont je suis fier</h3>
-                                        <p class="apprentissages__texte">Configurer correctment tous les outils et garder...</p>
+                                        <div class="apprentissages__item border">
+                                            <h3 class="apprentissages__titre couleur-rougeClair">Ce qui était difficle</h3>
+                                            <p class="apprentissages__texte">Configurer correctment tous les outils et garder...</p>
+                                        </div>
+
+                                        <div class="apprentissages__item apprentissages border">
+                                            <h3 class="apprentissages__titre couleur-rougeClair">Ce dont je suis fier</h3>
+                                            <p class="apprentissages__texte">Configurer correctment tous les outils et garder...</p>
+                                        </div>
+
                                     </div>
 
                                     <p class="details__liens__containeur">
                                         <a href="" class="details__liens">Voir le projet !</a>
                                     </p>
                                     
-                                    <button class="border fs-08 couleur-rougeClair" commandfor="details__projet1" command="close" name="btnDetails" id="bloc1--btnDetails-fermer" value="Fermer" title="Bouton pour fermer les détails du projet">
-                                        <label for="bloc1--btnDetails">Fermer</label>
-                                    </button>
+                                    <div class="projets__bouton">
+                                        <button class="border fs-08 couleur-rougeClair" commandfor="details__projet1" command="close" name="btnDetails" id="bloc1--btnDetails-fermer" value="Fermer" title="Bouton pour fermer les détails du projet">
+                                            <label for="bloc1--btnDetails">Fermer</label>
+                                        </button>
+                                    </div>
 
                                 </div>
                             </dialog>

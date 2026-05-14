@@ -123,9 +123,9 @@ body {
     margin-top: 1.5rem;
 }
 
-.projets__grille {
+/* .projets__grille {
 
-}
+} */
 
 .projets__item,
 .details__projets {
@@ -185,14 +185,80 @@ body {
     font-family: var(--texte-seconaire);
 }
 
+.projets__bouton button:hover {
+    color: white;
+    border-color: white;
+}
+
 .details__projets {
     max-width: 50rem;
     color: white;
 }
 
+.details__projets .details__liens__containeur {
+    padding-block: 1rem;
+}
+
+.apprentissages__containeur {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    list-style: none;
+}
+
+.apprentissages__item {
+    width: 100%;
+    padding-inline: 1rem;
+    background-color: var(--couleur-carbon);
+}
+
+.apprentissages__item h3 {
+    font-variant: small-caps;
+}
+
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
+}
+
+/* 'Voir le projet !' */
+.details__projets .details__liens {
+    color: var(--couleur-rougeClair);
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    border: none;
+    outline: solid 0px var(--couleur-rougeClair);
+    outline-offset: 5px;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+    padding-bottom: 2px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+
+    transition: background-size 0.3s ease, outline-width 0.3s ease;
+}
+
+.details__projets .details__liens:hover {
+    background-image: linear-gradient(
+        90deg,
+        var(--couleur-carbon),
+        var(--couleur-rougeClair),
+        var(--couleur-carbon)
+    );
+    background-size: 200% 2px;
+    animation: degrade-defilant 2s linear infinite;
+    outline-width: 2px;
+    
+}
+
+@keyframes degrade-defilant {
+    from { background-position: 0% bottom; }
+    to   { background-position: 200% bottom; }
 }
 
 /* Scroll-bar */
